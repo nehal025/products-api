@@ -72,12 +72,3 @@ cron.schedule('*/20 * * * *', function () {
 
 
 
-cron.schedule('* * * * *', function () {
-	var today = new Date();
-	var time = today.getHours();
-	
-	console.log(time);
-
-		
-
-});
