@@ -10,7 +10,7 @@ const costScrapper = async name => {
   const browser = await puppeteer.launch({
     defaultViewport: { 'width': width, 'height': height },
     ignoreDefaultArgs: ['--enable-automation'],
-    headless: false
+    headless: true
   });
 
   const page = await browser.newPage();

@@ -7,19 +7,20 @@ const costScrapper = require("../costScrapper");
 router.get('/', async (req, res) => {
 
 	let name = req.query.name;
-	var query = {};
 
 	console.log("Req from client")
 
 	if (name) {
-		query["name"] = name;
+		costScrapper(name).then(dataObj => {
+
+			res.json(dataObj)
+	
+		}).catch(console.error)	}
+		else{
+			res.json({ status: 'error', error: 'pls provide product name' })
 	}
 
-	costScrapper(name).then(dataObj => {
 
-		res.json(dataObj)
-
-	}).catch(console.error)
 
 
 });
