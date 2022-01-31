@@ -1,0 +1,26 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adminjs/express": "^4.0.1",
+    "@rollup/plugin-replace": "^3.0.1",
+    "admin-bro": "^4.0.1",
+    "admin-bro-mongoose": "^0.5.2",
+    "adminjs": "^5.5.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.0.1",
+    "request": "^2.88.2"
+  }
+}
