@@ -14,7 +14,7 @@ const app = express();
 mongoose.connect(process.env.DATABASE_URL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
-	
+
 })
 	.then(() => {
 		console.log("Connected to MongoDB database...");
@@ -62,13 +62,12 @@ const ping = () => request('https://blind-product-detection.herokuapp.com', (err
 cron.schedule('*/20 * * * *', function () {
 	var today = new Date();
 	var time = today.getHours();
-	
-		if( time<14|| time>19){
-			ping();
-		}
-		
+
+	if (time < 20) {
+		ping();
+	}
+
 
 });
-
 
 
