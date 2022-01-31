@@ -62,8 +62,8 @@ const ping = () => request('https://blind-product-detection.herokuapp.com', (err
 cron.schedule('*/20 * * * *', function () {
 	var today = new Date();
 	var time = today.getHours();
-	var rank = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-	if (rank.includes(time)) {
+	var activeHours = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+	if (activeHours.includes(time)) {
 		ping();
 	}
 
