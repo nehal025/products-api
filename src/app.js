@@ -63,9 +63,9 @@ cron.schedule('*/20 * * * *', function () {
 	var today = new Date();
 	var time = today.getHours();
 	
-		if(time>22 || time<14){
+		if( time<19|| time>3){
 			ping();
 		}
-
+		
 
 });
