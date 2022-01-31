@@ -45,8 +45,8 @@ const adminBro = new AdminJS({
 })
 
 const ADMIN = {
-    email: 'admin',
-    password: '1475369',
+    email:process.env.ADMIN_NAME,
+    password:process.env.ADMIN_PASSWORD,
 }
 
 const router = AdminJSExpress.buildAuthenticatedRouter(adminBro, {
