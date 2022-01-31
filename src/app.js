@@ -2,8 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const request = require('request');
-
-
+const cron = require('node-cron');
 
 var port = process.env.PORT || 3000;
 
@@ -48,15 +47,25 @@ app.use('/admin', adminRouter);
 app.listen(port, console.log(`Listening on port ${port}`));
 
 
-const ping = () => request('http://localhost:3000/', (error, response, body) => {
-	// Ping server every 20min
-	console.log('Ping server every 20min'); 
 
-    console.log('error:', error); 
-    console.log('statusCode:', response && response.statusCode); 
-    console.log('body:', body); 
+
+const ping = () => request('https://blind-product-detection.herokuapp.com', (error, response, body) => {
+
+	console.log('Preventing server from down')
+	console.log('error:', error);
+	console.log('statusCode:', response && response.statusCode);
+	console.log('body:', body);
+
 });
 
-setInterval(ping,20*60*1000);
+
+cron.schedule('*/20 * * * *', function () {
+	var today = new Date();
+	var time = today.getHours();
+	
+		if(time>9 || time<1){
+			ping();
+		}
 
 
+});
