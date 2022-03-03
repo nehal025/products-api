@@ -11,9 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@adminjs/express": "^4.0.1",
-    "@rollup/plugin-replace": "^3.0.1",
-    "admin-bro": "^4.0.1",
-    "admin-bro-mongoose": "^0.5.2",
+    "@adminjs/mongoose": "^2.0.2",
     "adminjs": "^5.5.1",
     "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",

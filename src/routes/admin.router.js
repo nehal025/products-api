@@ -1,9 +1,9 @@
-const AdminBro = require('admin-bro')
-const AdminBroMongoose = require('admin-bro-mongoose')
-const Product = require('../models/productModel');
 const AdminJS = require('adminjs')
 const AdminJSExpress = require('@adminjs/express')
-AdminBro.registerAdapter(AdminBroMongoose)
+const AdminJSMongoose = require('@adminjs/mongoose')
+const Product = require('../models/productModel');
+
+AdminJS.registerAdapter(AdminJSMongoose)
 
 const contentParent = {
     name: 'DATABASE',
