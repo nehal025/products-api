@@ -23,7 +23,9 @@
     "mongoose": "^6.1.2",
     "node-cron": "^3.0.0",
     "nodemon": "^2.0.15",
-    "puppeteer": "^13.0.1",
+    "puppeteer": "^13.4.1",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0",
     "request": "^2.88.2",
     "tslib": "^2.3.1"
   }

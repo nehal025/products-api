@@ -4,7 +4,7 @@ import React from 'react';
 const divStyle = {
     width: '50%',
     height: '100%',
-    backgroundImage: `url('https://image.freepik.com/free-vector/communication-flat-icon_1262-18771.jpg')`,
+    backgroundImage: `url('')`,
     alignSelf: 'center' ,
 
 };

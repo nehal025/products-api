@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const costScrapper = require("../costScrapper");
+const costScrapper = require("../Scrapper/costScrapper");
 
 // Get all Min Max price Product 
 router.get('/', async (req, res) => {
@@ -19,8 +19,6 @@ router.get('/', async (req, res) => {
 		else{
 			res.json({ status: 'error', error: 'pls provide product name' })
 	}
-
-
 
 
 });

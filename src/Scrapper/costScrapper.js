@@ -1,4 +1,7 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer-extra')
+
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin());
 
 const pageURL = 'https://www.amazon.in/';
 const width = 1024;
@@ -63,18 +66,18 @@ const costScrapper = async name => {
 
   await page.click('#nav-search-submit-button');
 
-  var dataObj = [];
 
   await page.waitForNavigation()
-
+  
+  var dataObj = [];
   try {
     var title, img, cash, bookNow;
 
     await page.waitForSelector(' div[data-component-type="s-search-result"]');
 
-    const productsHandles = await page.$$('div[data-component-type="s-search-result"]');
+    const productsArray = await page.$$('div[data-component-type="s-search-result"]');
 
-    for (const producthandle of productsHandles) {
+    for (const producthandle of productsArray) {
       try {
         title = await page.evaluate(
           (el) => el.querySelector(' span[class="a-size-medium a-color-base a-text-normal"]').textContent,

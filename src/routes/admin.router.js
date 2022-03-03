@@ -27,7 +27,7 @@ const adminBro = new AdminJS({
     ], rootPath: '/admin',
     branding:
     {
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+        logo: 'https://img.freepik.com/free-vector/server-control-panel-hosting-software-vector-illustration_116137-337.jpg?w=740',
         companyName: "BlindProductDetection",
         softwareBrothers: false,
 
